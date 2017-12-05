@@ -1,0 +1,29 @@
+{
+  "name": "formation_nodejs",
+  "version": "1.0.0",
+  "description": "Exercices de la formation NodeJS",
+  "main": "exercices/exercice1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sportelli/formation_nodejs.git"
+  },
+  "keywords": [
+    "formation",
+    "nodejs",
+    "training",
+    "web",
+    "javascript",
+    "expressjs",
+    "mongoose",
+    "mongodb"
+  ],
+  "author": "Felix SPORTELLI",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sportelli/formation_nodejs/issues"
+  },
+  "homepage": "https://github.com/sportelli/formation_nodejs#readme"
+}
