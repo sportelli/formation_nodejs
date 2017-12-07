@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/sportelli/formation_nodejs/issues"
   },
-  "homepage": "https://github.com/sportelli/formation_nodejs#readme"
+  "homepage": "https://github.com/sportelli/formation_nodejs#readme",
+  "dependencies": {
+    "xml2js": "^0.4.19"
+  }
 }
