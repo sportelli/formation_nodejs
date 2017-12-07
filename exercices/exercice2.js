@@ -1,8 +1,8 @@
 // Chargement du module HTTP
-var http = require('http');
+const http = require('http');
 
 // On charge notre module1
-var module1 = require('./modules/module1');
+const module1 = require('./modules/module1');
 
 http.createServer(function (req, res) {
 
