@@ -1,0 +1,39 @@
+extends layout 
+
+block content
+    h1 #{titre}
+    p.impair.rouge.enhaut ceci est le premier P
+    p#monsecondP.rouge ceci est le premier P
+    a(href="http://google.fr", target="_blank") Aller vers google
+    br 
+    a(href=url) Aller vers #{url}
+    br 
+    if (url2 == "https://porn.com")
+        p CENSURE !!
+    else 
+        a(href=url2) Aller vers #{url2}
+    ul
+        each article in articles
+            li #{article}    
+    br 
+    br 
+    table(border=1)
+        thead
+            tr 
+                th id
+                th nom
+                th prix
+        tbody      
+        - let i = 0;
+        each article in articles_objet
+            - let myclass="pair"
+            if (i%2 != 0 )
+                - myclass="impair"
+            tr(class=myclass) 
+                td #{article.id}
+                td #{article.nom}
+                if (article.prix > 0 )
+                    td #{article.prix}
+                else
+                    td Indisponible
+            - i = i+1 
