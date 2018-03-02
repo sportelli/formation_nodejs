@@ -18,10 +18,9 @@ class App {
             res.json({"prenom": "felix", "nom":"sportelli"});
         });
 
-        this.express.get('/users_mongo' , function (req, res) {
-            new UserDAO().getAll(function(err, utilisateurs){
-                res.json(utilisateurs);
-            });
+        this.express.get('/users_mongo' , async function (req, res) {
+            const utilisateurs = await new UserDAO().getAll();
+            res.json(utilisateurs);
         });
 
     }

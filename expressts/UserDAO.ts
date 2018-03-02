@@ -1,15 +1,15 @@
-const mongoClient = require('mongodb').MongoClient;
+import {MongoClient} from 'mongodb';
 
 class UserDAO {
-    async getAll(cb){
+    async getAll(/* cb */){
         try {
-            const db= await mongoClient.connect("mongodb://localhost:27017/formation");
+            const db= await MongoClient.connect("mongodb://localhost:27017/formation");
             const collection = await db.collection("utilisateurs");
             const utilisateurs = await collection.find().toArray();
-            cb(null,utilisateurs);
+            return utilisateurs;
             
         } catch (err){
-            cb(err);
+            return null;
         }
 /*        mongoClient.connect("mongodb://localhost:27017/formation", function (err, db){
             if (err){
