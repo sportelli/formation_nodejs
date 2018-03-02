@@ -1,6 +1,18 @@
 import {MongoClient} from 'mongodb';
 
 class UserDAO {
+    async create(user){
+        try{
+            const db= await MongoClient.connect("mongodb://localhost:27017/formation");
+            const collection = await db.collection("utilisateurs");
+            const userDB = await collection.save(user);
+            return user;
+        } catch(error){
+            return null;
+        }
+    }
+
+
     async getAll(/* cb */){
         try {
             const db= await MongoClient.connect("mongodb://localhost:27017/formation");
